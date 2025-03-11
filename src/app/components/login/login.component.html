@@ -1,28 +1,36 @@
 <div class="parent">
 
     <div class="container">
-        
+
+        <div class="left-side">
         <form [formGroup]="userForm">
-            <h1>Login</h1>
+            <h1>Bienvenidos</h1>
+            <p>Ingresa tu usuario y password para acceder a tu sistema de gestion de pacientes, dietas, y planes de alimentacion</p>
             <div class="input-box">
-                <input type="email" formControlName="username" placeholder="email">
+                <p>Usuario</p>
+                <input type="email" formControlName="username" placeholder="correo@prueba.com">
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="password" formControlName="password" placeholder="password">
+                <p>Contraseña</p>
+                <input type="password" formControlName="password" placeholder="">
                 <i class="bx bx-lock-alt"></i>
             </div>
+            
+            <br>
+            <button class="btn" (click)="doLogin()">Ingresar</button>
+            <br>
+           
             <div class="remember">
-                <label for="#">
-                    <input type="checkbox"> Remember me
-                </label>
+                
                 <a href="#">Forgot password?</a>
             </div>
-            <button class="btn" (click)="doLogin()">Login</button>
-            <div class="register">
-                <p>Dont you have account? <br> <a href="#">Register</a></p>
-            </div>
         </form>
+    </div>
+    <div class="right-side">
+        <img src="/src/app/IMG/sandia.webp" alt="Imagen Prueba">
+        
+    </div>
     </div>
 
 

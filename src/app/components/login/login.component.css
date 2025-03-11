@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #E3E0D5 ;
+  }
+  
+  .left-side, .right-side {
+    flex: 1; /* Ambas mitades ocupan el 50% */
+    padding: 20px;
+    margin: auto;
+  }
+  
+.left-side .input-box input{
+  width: 80vh;
+  border-radius: 10px;
+
+}
+
+.left-side button{
+    width: 80vh;
+    height: 5vh;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+  
+  .left-side h1{
+    color: #3D5B2C;
+  }

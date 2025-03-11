@@ -21,24 +21,29 @@ export class LoginComponent {
 
   request: LoginRequest = new LoginRequest;
 
-  doLogin(){
+  doLogin() {
     const formValue = this.userForm.value;
 
-    if (formValue.username == '' || formValue.password == '') {
+    if (formValue.username.trim() === '' || formValue.password.trim() === '') {
       alert('Credenciales Incorrectas');
       return;
     }
 
-    this.request.username = formValue.username;
-    this.request.password = formValue.password;
+    const request: LoginRequest = {
+      username: formValue.username,
+      password: formValue.password
+    };
 
-    this.integration.doLogin(this.request).subscribe({
-      next:(res) => {
-        console.log("Recived Response:" +res.token);
-      }, error: (err) => {
-        console.log("Error Recived Response"+err);
+    this.integration.doLogin(request).subscribe({
+      next: (res) => {
+        console.log("Recibido Response: " + res.token);
+        localStorage.setItem("token", res.token ?? '');
+
+      },
+      error: (err) => {
+        console.log("Error recibido: ", err);
+        alert("Error al iniciar sesión");
       }
-    })
+    });
   }
-
 }

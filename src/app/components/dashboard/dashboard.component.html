@@ -1,0 +1,98 @@
+<div class="dashboard-container">
+    <!-- HEADER -->
+    <div class="dashboard-header">
+      <h1 class="mat-h1">Hola Sol de la Cruz</h1>
+  
+      <div class="cards-container">
+        <mat-card class="dashboard-card">
+          <mat-card-title>Próxima Cita</mat-card-title>
+          <mat-card-content>
+            <p><strong>Cliente:</strong> Juan Pérez</p>
+            <p><strong>Fecha:</strong> 15 Feb 2025</p>
+            <p><strong>Hora:</strong> 10:30 AM</p>
+          </mat-card-content>
+        </mat-card>
+  
+        <mat-card class="dashboard-card">
+          <mat-card-title>Menús Pendientes</mat-card-title>
+          <mat-card-content>
+            <p><strong>Cantidad:</strong> 5</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  
+        
+
+    <!-- BUSCADOR Y BOTÓN -->
+    <div class="search-add-container">
+      <mat-form-field class="search-field" appearance="outline">
+        <mat-label>Buscar paciente</mat-label>
+        <input matInput placeholder="Ingrese el nombre">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Agregar Paciente</button>
+    </div>
+  
+    <!-- TABLA DE PACIENTES -->
+    <div class="table-container">
+      <table mat-table [dataSource]="pacientes" class="mat-elevation-z8">
+        <!-- Columnas -->
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.nombre }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="ultimaCita">
+          <th mat-header-cell *matHeaderCellDef> Última Cita </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.ultimaCita }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="siguienteCita">
+          <th mat-header-cell *matHeaderCellDef> Siguiente Cita </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.siguienteCita }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="pesoInicial">
+          <th mat-header-cell *matHeaderCellDef> Peso Inicial </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.pesoInicial }} kg </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="kcal">
+          <th mat-header-cell *matHeaderCellDef> Kcal </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.kcal }} kcal </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="imc">
+          <th mat-header-cell *matHeaderCellDef> IMC </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.imc }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="objetivo">
+          <th mat-header-cell *matHeaderCellDef> Objetivo </th>
+          <td mat-cell *matCellDef="let paciente"> {{ paciente.objetivo }} </td>
+        </ng-container>
+  
+        <!-- MENÚ DE OPCIONES -->
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let paciente">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Editar</button>
+              <button mat-menu-item>Eliminar</button>
+            </mat-menu>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  
+    <!-- PAGINACIÓN -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

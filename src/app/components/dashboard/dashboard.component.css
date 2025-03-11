@@ -1,0 +1,58 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  h1 {
+    flex: 40%;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 16px;
+    flex: 60%;
+  }
+  
+  .dashboard-card {
+    flex: 1;
+    padding: 16px;
+  }
+  
+  /* Buscador y botón */
+  .search-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .search-add-container .search-field input {
+    width: 80vw;
+  }
+  
+  button {
+    width: 20%;
+  }
+  
+  /* Tabla */
+  .table-container {
+    width: 100%;
+  }
+  
+  .mat-table {
+    width: 100%;
+  }
+  
+  mat-icon {
+    cursor: pointer;
+  }
+  
