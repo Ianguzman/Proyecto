@@ -13,7 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  styleUrl: './dashboard.component.css',
   standalone: true,
   imports: [
     MatTableModule,

@@ -1,37 +1,49 @@
 <div class="dashboard-container">
-    <!-- HEADER -->
-    <div class="dashboard-header">
-      <h1 class="mat-h1">Hola Sol de la Cruz</h1>
-  
-      <div class="cards-container">
+    
+
+    <div class="header-container">
+
+      <div class="caja-grande">
+        <h1 class="mat-h1">Hola Sol de la Cruz</h1>
+      </div>
+
+      <div class="caja">  
         <mat-card class="dashboard-card">
-          <mat-card-title>Próxima Cita</mat-card-title>
-          <mat-card-content>
-            <p><strong>Cliente:</strong> Juan Pérez</p>
-            <p><strong>Fecha:</strong> 15 Feb 2025</p>
-            <p><strong>Hora:</strong> 10:30 AM</p>
-          </mat-card-content>
-        </mat-card>
-  
-        <mat-card class="dashboard-card">
-          <mat-card-title>Menús Pendientes</mat-card-title>
-          <mat-card-content>
-            <p><strong>Cantidad:</strong> 5</p>
-          </mat-card-content>
+              <mat-card-content>
+                <p>Siguiente Cita</p>
+                <p><strong>Fecha:</strong> 15 Feb 2025 10:30 AM</p>
+                <p><strong>Cliente:</strong> Juan Pérez</p>
+               </mat-card-content>
         </mat-card>
       </div>
+
+      <div class="caja" >  
+        <mat-card class="dashboard-card">
+          <mat-card-title>Menús Pendientes</mat-card-title>
+            <mat-card-content>
+              <p><strong>Cantidad:</strong> 5</p>
+            </mat-card-content>
+        </mat-card>
+      </div>
+      
     </div>
   
         
 
     <!-- BUSCADOR Y BOTÓN -->
-    <div class="search-add-container">
-      <mat-form-field class="search-field" appearance="outline">
-        <mat-label>Buscar paciente</mat-label>
-        <input matInput placeholder="Ingrese el nombre">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
-      <button mat-raised-button color="primary">Agregar Paciente</button>
+    <div class="Buscar-Y-Btn">
+
+      <div class="buscador">
+          <mat-form-field appearance="outline">
+            <mat-label>Buscar paciente</mat-label>
+              <input matInput placeholder="Ingrese el nombre">
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+      </div>
+      <div class="btn-agregar">
+        <button mat-raised-button color="primary">Agregar Paciente</button>
+      </div>
+    
     </div>
   
     <!-- TABLA DE PACIENTES -->

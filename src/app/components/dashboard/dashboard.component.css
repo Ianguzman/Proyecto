@@ -1,58 +1,67 @@
-.dashboard-container {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-  }
-  
-  /* Header */
-  .dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  h1 {
-    flex: 40%;
-  }
-  
-  .cards-container {
-    display: flex;
-    gap: 16px;
-    flex: 60%;
-  }
-  
-  .dashboard-card {
-    flex: 1;
-    padding: 16px;
-  }
-  
-  /* Buscador y botón */
-  .search-add-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .search-add-container .search-field input {
-    width: 80vw;
-  }
-  
-  button {
-    width: 20%;
-  }
-  
-  /* Tabla */
-  .table-container {
-    width: 100%;
-  }
-  
-  .mat-table {
-    width: 100%;
-  }
-  
-  mat-icon {
-    cursor: pointer;
-  }
-  
+/* |||||||||||||||||||||||||||||||||| INICIO HEADER  ||||||||||||||||||||||||||||||||||*/
+.header-container .caja{
+border: 1px solid black;
+background-color: beige;
+width: 400px;
+height: 120px;
+max-height: 200px;
+text-align: center;
+margin: 5px;
+display: flex;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container .caja-grande{
+  min-width: 300px;
+  flex: 2;
+  max-width: 700px;
+  background-color:aqua ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+} 
+.header-container .caja{
+  min-width: 300px;
+  flex: 1;
+  max-width: 500px;
+  background-color:lightcoral ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+} 
+
+/* |||||||||||||||||||||||||||||||||| FIN HEADER  ||||||||||||||||||||||||||||||||||*/
+
+/* |||||||||||||||||||||||||||||||||| INICIO BUSQUEDA  ||||||||||||||||||||||||||||||||||*/
+
+.Buscar-Y-Btn{
+  display: flex;
+}
+.Buscar-Y-Btn .buscador  {
+  flex: 1;
+  min-width: 200px;
+  max-width: 900px;
+}
+.Buscar-Y-Btn .buscador mat-form-field{
+  width: 100%;
+  box-sizing: content-box;
+  flex: 1;
+}
+
+.Buscar-Y-Btn .btn-agregar {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+
+.Buscar-Y-Btn .btn-agregar button {
+  width: 100%;
+  box-sizing: content-box;
+  flex: 1;
+}
+/* |||||||||||||||||||||||||||||||||| FIN BUSQUEDA  ||||||||||||||||||||||||||||||||||*/
